@@ -1,0 +1,11 @@
+Executor class: Runs multipule statements as well as connectors.
+Tokenizer Class: Take user input as a string and return it as a vector of commands. Uses a remove comments function and a split tokens function.
+Shell Class: It has a member function that runs the command line as an infinite loop until exited. It is essentially in charge of deligating work. 
+Component Class: Base to our composite class and token class.
+Token Class: Is the parent class for Argument_Token, Connector_Token, Options_Token, Command_Token, and Special_Token *These are left vague in order to add more features later when needed. 
+Argument_Token Class: Anything passed to a command without a "-".
+Option_Token Class: Anthing after a command and procceding an arguement with a "-" in front.
+Connector_token Class: "&&" and "||". Used to link commands togther using logic.
+Command_Token Class: Anything that can be excecuted by execvp().
+Special_Token Class: Special command implmented by our shell.
+Statement Class: Our composite class and holds a vector of components.
